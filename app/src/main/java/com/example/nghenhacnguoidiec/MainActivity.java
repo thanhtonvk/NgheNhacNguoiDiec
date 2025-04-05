@@ -248,15 +248,15 @@ public class MainActivity extends AppCompatActivity {
                         }
 
 
-                        btnPlay.setText("⏸ Tạm dừng");
+                        btnPlay.setText("⏸ Dừng");
                     });
                 } else {
                     if (mediaPlayer.isPlaying()) {
-                        mediaPlayer.pause();
+                        mediaPlayer.stop();
+                        mediaPlayer = null;
+                        videoView.stopPlayback();
                         btnPlay.setText("▶ Phát");
-                    } else {
-                        mediaPlayer.start();
-                        btnPlay.setText("⏸ Tạm dừng");
+
                     }
                 }
             }
